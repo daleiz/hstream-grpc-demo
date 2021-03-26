@@ -1,2 +1,4 @@
 packages: ./*.cabal
           ./core/*.cabal
+          ./proto3-suite/*.cabal
+          ./proto3-wire/*.cabal
