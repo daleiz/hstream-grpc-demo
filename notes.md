@@ -23,9 +23,13 @@ cabal run grpc-haskell:hellos-client
 
 ``` bash
 
-export C_INCLUDE_PATH=/your/gpc/install/location/include:$C_INCLUDE_PATH
-			
-export LD_LIBRARY_PATH=/your/grpc/install/location/lib:$LD_LIBRARY_PATH
+## export C_INCLUDE_PATH=/your/gpc/install/location/include:$C_INCLUDE_PATH
+
+export C_INCLUDE_PATH=/home/wangbin/tmp/grpc-1.35.0-install/include:$C_INCLUDE_PATH
+
+## export LD_LIBRARY_PATH=/your/grpc/install/location/lib:$LD_LIBRARY_PATH
+
+export LD_LIBRARY_PATH=/home/wangbin/tmp/grpc-1.35.0-install/lib:$LD_LIBRARY_PATH
 
 
 ```
@@ -36,7 +40,9 @@ export LD_LIBRARY_PATH=/your/grpc/install/location/lib:$LD_LIBRARY_PATH
 
 cabal configure -f with-examples
 
-cabal build --extra-lib-dirs=/your/grpc/install/location/lib
+## cabal build --extra-lib-dirs=/your/grpc/install/location/lib
+
+cabal build --extra-lib-dirs=/home/wangbin/tmp/grpc-1.35.0-install/lib
 
 ```
 
@@ -44,9 +50,11 @@ cabal build --extra-lib-dirs=/your/grpc/install/location/lib
 
 ``` bash
 
-cabal run --extra-lib-dirs=/your/grpc/install/location/lib grpc-haskell:hellos-server
+## cabal run --extra-lib-dirs=/your/grpc/install/location/lib grpc-haskell:hellos-server
 
-cabal run --extra-lib-dirs=/your/grpc/install/location/lib grpc-haskell:hellos-client
+cabal run --extra-lib-dirs=/home/wangbin/tmp/grpc-1.35.0-install/lib grpc-haskell:hellos-server
+
+cabal run --extra-lib-dirs=/home/wangbin/tmp/grpc-1.35.0-install/lib grpc-haskell:hellos-client
 
 ```
 
