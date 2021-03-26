@@ -49,3 +49,11 @@ cabal run --extra-lib-dirs=/your/grpc/install/location/lib grpc-haskell:hellos-s
 cabal run --extra-lib-dirs=/your/grpc/install/location/lib grpc-haskell:hellos-client
 
 ```
+
+## 构建 grpc-haskell 的 haddock 文档
+
+``` bash
+
+cabal haddock --extra-lib-dirs=/home/wangbin/tmp/grpc-1.35.0-install/lib 
+
+```
